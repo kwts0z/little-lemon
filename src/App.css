@@ -1,0 +1,48 @@
+.App {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 1rem;
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  background-color: #EDEFEE;
+}
+
+header ul {
+  list-style-type: none;
+}
+
+header li {
+  display: inline;
+}
+
+header li a {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+header li a:hover {
+  background-color: #495E57;
+  border-radius: 8px;
+  color: white;
+}
+
+footer {
+  background-color: #495E57;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+}
+
+footer li a, p {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 0px;
+  text-decoration: none;
+  text-align: left;
+}
