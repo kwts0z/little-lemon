@@ -4,7 +4,7 @@ function Footer(){
   return(
     <footer>
       <img src={logo} alt='Little Lemon Logo'></img>
-      <div>
+      <div className='Doormat'>
         <h1>Doormat Navigation</h1>
         <ul>
           <li>
