@@ -53,19 +53,30 @@ footer {
   padding-right: 15%;
   padding-top: 2%;
   padding-bottom: 2%;
+  align-items: center;
+  justify-items: center;
 }
 
 footer li a, footer p, footer h1 {
   color: #EDEFEE;
   font-weight: bold;
-  text-align: center;
   padding: 0px;
   text-decoration: none;
-  text-align: left;
+  text-align: center;
+  justify-self: center;
 }
 
 footer ul{
   list-style-type: none;
-  display: inline-block;
+  align-self: center;
+  justify-self: center;
+  margin: 0;
+  padding: 0;
+}
+
+.doormat ul{
+  justify-self: center;
+  align-self: center;
+  text-align: center;
 }
 

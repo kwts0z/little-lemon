@@ -1,10 +1,10 @@
-import logo from './Assets/footer-logo.png'
+import logo from './Assets/biglogo1.png'
 
 function Footer(){
   return(
     <footer>
       <img src={logo} alt='Little Lemon Logo'></img>
-      <div className='Doormat'>
+      <div className='doormat'>
         <h1>Doormat Navigation</h1>
         <ul>
           <li>

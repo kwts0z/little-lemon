@@ -8,13 +8,13 @@ function Navbar(){
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/#about-section">About</Link>
           </li>
           <li>
             <Link to="/menu">Menu</Link>
           </li>
           <li>
-            <Link to="/reservation">Reservation</Link>
+            <Link to="reservation">Reservation</Link>
           </li>
           <li>
             <Link to="/order">Order Online</Link>
