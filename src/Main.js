@@ -1,5 +1,6 @@
-import { Routes, Route} from "react-router-dom"
+import { Routes, Route, redirect, useNavigate} from "react-router-dom"
 import React, {useReducer} from "react";
+import { useEffect } from "react";
 
 import HomePage from "./Components/HomePage";
 import About from "./Components/About";
@@ -7,31 +8,42 @@ import Menu from "./Components/Menu";
 import Order from "./Components/Order";
 import Login from "./Components/Login";
 import BookingPage from "./Components/BookingPage";
+import {fetchAPI, submitAPI} from "./bookingAPI"
+import ConfirmedBooking from "./Components/ConfirmedBooking";
 
 function Main(){
+
   const updateTimes = (state, action) => {
-    if (action.type === 'example') return ["15:00", "16:00", "19:00"];
+    if (action.type === 'example') return fetchAPI(action.date);
     return state;
-  }
+  };
 
-  const initializeTimes = () => {
-    const initialTimes = ["15:00", "16:00", "17:00", "18:00", "19:00"];
+  function initializeTimes(){
+    const today = new Date();
+    const initialTimes = fetchAPI(today);
     return initialTimes;
-  }
+  };
+  const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
 
-  const initialTimess = ["15:00", "16:00", "17:00", "18:00", "19:00"];
+  const navigate = useNavigate();
 
-  const [availableTimes, dispatch] = useReducer(updateTimes, initialTimess);
+  const submitForm = (formData) => {
+    const confirmed = submitAPI(formData);
+    if(confirmed){
+      navigate('/confirmedbooking');
+    }
+  };
 
   return(
-    <main>
+    <main data-testid="main">
       <Routes>
           <Route path="/" element={<HomePage/>}>HomePage</Route>
           <Route path="/about" element={<About/>}></Route>
           <Route path="/menu" element={<Menu/>}></Route>
-          <Route path="/reservation" element={<BookingPage availableTimes={availableTimes} dispatch={dispatch}/>}></Route>
+          <Route path="/reservation" element={<BookingPage availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm}/>}></Route>
           <Route path="/order" element={<Order/>}></Route>
           <Route path="/login" element={<Login/>}></Route>
+          <Route path="/confirmedbooking" element={<ConfirmedBooking/>}></Route>
       </Routes>
     </main>
   );
