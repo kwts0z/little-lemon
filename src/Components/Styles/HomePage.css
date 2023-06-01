@@ -1,0 +1,157 @@
+.hero-section {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  background-color: #495E57;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.info-container {
+  display: grid;
+  grid-template-rows: 20% 10% 50% 20%;
+  text-align: left;
+  align-items: center;
+}
+
+.hero-section img {
+  width: 80%;
+  height: 90%;
+  justify-self: right;
+}
+
+.info-container p{
+  display: block;
+  width: 80%;
+  height: auto;
+  color: #EDEFEE;
+  justify-self: left;
+}
+
+.info-container h1{
+  color: #EDEFEE;
+  justify-self: left;
+}
+
+.info-container h2{
+  font-size: medium;
+  margin: 0;
+  color: #EDEFEE;
+  justify-self: left;
+}
+
+.info-container button {
+  height: 5vh;
+  width: 12vw;
+  background-color: #F4CE14;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #495E57;
+  justify-self: left;
+}
+
+.highlight-section {
+  display: grid;
+  grid-template-rows: 20% 80%;
+  align-items: center;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.specials {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.specials button {
+  height: 5vh;
+  width: 12vw;
+  background-color: #F4CE14;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #495E57;
+  justify-self: right;
+}
+
+.card-section {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 500px;
+  column-gap: 5%;
+  margin-bottom: 5%;
+}
+
+.testimonials-section {
+  display: grid;
+  grid-template-rows: auto;
+  align-items: center;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 2%;
+  background-color: #495E57;
+}
+
+.testimonials-section h1{
+  color:#EDEFEE;
+  justify-self: center;
+}
+
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  justify-content: space-evenly;
+  gap: 5%;
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.about {
+  display: grid;
+  grid-template-rows: 10% 10% auto 40%;
+  color: #495E57;
+  align-items: center;
+}
+
+.paragraphs {
+  display: inline-block;
+  align-self: self-start;
+  justify-self:end;
+}
+
+.about-images {
+  position: relative;
+  justify-self: center;
+  top: 3rem;
+  left: 0;
+}
+
+.about-images img{
+  height: 300px;
+  width: 250px;
+  object-fit: cover;
+}
+
+.img1 {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.img2 {
+  position: absolute;
+  top: -5rem;
+  left: 9rem;
+}

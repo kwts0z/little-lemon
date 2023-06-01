@@ -1,0 +1,26 @@
+.testimonial-card{
+  background-color: #EDEFEE;
+  display: grid;
+  grid-template-rows: 10% 40% 10% 40%;
+  align-items: center;
+  justify-items: center;
+  border-radius: 8px;
+}
+
+.testimonial-card img{
+  height: 90%;
+  width: 60%;
+}
+
+.stars img{
+  height: 30px;
+  width: 30px;
+}
+
+.testimonial-card p{
+  display: inline-block;
+  text-align: center;
+  font-style: italic;
+  padding-left: 2%;
+  padding-right: 2%;
+}
